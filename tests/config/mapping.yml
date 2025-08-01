@@ -1,0 +1,32 @@
+default:
+  name: Default User
+  email: default
+
+
+identities:
+  - id: personal
+    name: Personal Name
+    email: personal@mail.com
+
+  - id: work
+    name: Work Name
+    email: work@mail.com
+
+
+mappings:
+
+  - target: path
+    pattern: **/personal/*
+    identity: personal
+
+  - target: url
+    pattern: **/personal/*
+    identity: personal
+
+  - target: url
+    pattern: **/work/*
+    identity: work
+
+  - target: path
+    pattern: **/work/*
+    identity: work
